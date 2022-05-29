@@ -1,0 +1,20 @@
+<!doctype html>
+
+    <meta charset=utf-8> </head>
+    <body>
+        <h1>DNA Sequencer</h1>
+        <form action="#" method="post">
+            <p>Input DNA Sequence:</p>
+            <p><input type="text" name="dna_seq" /></p>
+            <p><input type="submit" value="submit"/></p>
+        </form>
+        <h1>Previous Queries</h2>
+        <script type="text/javascript">
+            function myFunc(vars) {
+                return vars
+            }
+            hi = myFunc({{data | tojson}}).join(" <br> ")
+            document.write("<br><br>"+hi);
+
+        </script>
+    </body>
