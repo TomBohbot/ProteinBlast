@@ -1,17 +1,21 @@
 import pytest
-from app.util import clean_dna, valid_dna
+from app.util import clean_sequence, valid_dna, valid_protein
 
 
-def test_clean_dna():
-    dna = " AcT "
-    assert clean_dna(dna) == "ACT"
+def test_clean_seq():
+    assert clean_sequence(" AcT ") == "ACT"
 
 
 def test_valid_dna():
-    dna = "ACT"
-    assert valid_dna(dna) == True
+    assert valid_dna("ACT") == True
 
 
 def test_invalid_dna():
-    dna = "EACT"
-    assert valid_dna(dna) == False
+    assert valid_dna("EACT") == False
+
+def test_valid_protein():
+    assert valid_protein("ASDFGHKL") == True
+
+
+def test_invalid_protein():
+    assert valid_protein("ASDFGHJKLQWERTYUIOPZXCVBNM") == False
