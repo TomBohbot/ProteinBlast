@@ -13,6 +13,7 @@ def test_valid_dna():
 def test_invalid_dna():
     assert valid_dna("EACT") == False
 
+
 def test_valid_protein():
     assert valid_protein("ASDFGHKL") == True
 
