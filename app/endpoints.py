@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
-from util import clean_dna, valid_dna
+from util import clean_sequence, valid_dna
+from blast import blast
 import asyncio
 import redis
 
@@ -18,10 +19,11 @@ async def index():
 @app.route('/',methods=['POST'])
 async def dna_request():
     ip_address = request.remote_addr
-    dna = clean_dna(request.form["dna_seq"])
+    dna = clean_sequence(request.form["dna_seq"])
     print(f"Inputted DNA Sequence: {dna}")    
     if not valid_dna(dna):   
         return jsonify("Improper DNA Sequence Inputted.")
+    # sequenced_dna = await blast(dna)
     r.rpush(f"{ip_address}::prev_query", dna)    
     return jsonify(f"The DNA you entered is {dna}.")
 
