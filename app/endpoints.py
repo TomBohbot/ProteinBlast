@@ -30,7 +30,7 @@ async def dna_request():
         sequenced_dna.protein,
         sequenced_dna.match
     )
-    r.rpush(f"{ip_address}::{KEY}", response)
+    r.lpush(f"{ip_address}::{KEY}", response)
     return response
 
 
