@@ -16,6 +16,7 @@ def dna_seq_to_fasta(dna: str) -> str:
     with open(INPUT_FILE_PATH, "w") as output_handle:
         SeqIO.write(record, output_handle, "fasta")
 
+
 async def blast(dna: str) -> dict:
     # Create fasta file to compare input to database:
     dna_seq_to_fasta(dna)
