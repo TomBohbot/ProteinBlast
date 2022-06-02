@@ -19,8 +19,6 @@ Try it using Docker
 
 To start the Protein Blast server:
 
-::
-
     docker build -t protein-blast . && docker run -p 5000:5000 protein-blast
 
 Then check it out in your browser: http://127.0.0.1:5000/ .
