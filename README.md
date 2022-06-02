@@ -25,3 +25,19 @@ Then check it out in your browser: http://127.0.0.1:5000/ .
 
 Once you are in the website you can input any DNA sequence and see the protein
 match if it exists.
+
+Here are some DNA Sequences you can test and expected results:
+
+    CCTTTTCTCTCGAGCGGAGGGAAAACGGAA
+    
+Input DNA: CCTTTTCTCTCGAGCGGAGGGAAAACGGAA
+Matching Genome: NC_000852
+Matching Protein: NP_048806.1
+Matching Sequence: FSLERRENG
+
+
+    ACCGATGAAGCGAGGACCGGCCGACACCTTCTTCCCCACGATAGA
+Input DNA: ACCGATGAAGCGAGGACCGGCCGACACCTTCTTCCCCACGATAGA
+Matching Genome: NC_027867
+Matching Protein: YP_009165003.1
+Matching Sequence: PMKRGPADTFFPTI
