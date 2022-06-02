@@ -1,4 +1,4 @@
-Potein Blast
+Protein Blast
 ====
 
 Protein Blast is a web application that can determine whether a particular DNA strand
